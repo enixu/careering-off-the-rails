@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+	<ae:configuration>
+		
+		<autoload name="JobeetCategoriesBaseAction">%core.module_dir%/Categories/lib/action/JobeetCategoriesBaseAction.class.php</autoload>
+		<autoload name="JobeetCategoriesBaseModel">%core.module_dir%/Categories/lib/model/JobeetCategoriesBaseModel.class.php</autoload>
+		<autoload name="JobeetCategoriesBaseView">%core.module_dir%/Categories/lib/view/JobeetCategoriesBaseView.class.php</autoload>
+		
+	</ae:configuration>
+</ae:configurations>

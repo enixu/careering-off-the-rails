@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/routing/1.0">
+	<ae:configuration>
+		<routes>
+			<route pattern="^/({locale:[a-z]{2}(_[A-Z]{2})?})" stop="false" imply="true" cut="true" locale="${locale}">
+				<callbacks>
+					<callback class="JobeetLanguageRoutingCallback" />
+				</callbacks>
+				<ignores>
+					<ignore>locale</ignore>
+				</ignores>
+			</route>
+
+			<route name="ajax" pattern="XMLHttpRequest" source="_SERVER[HTTP_X_REQUESTED_WITH]" stop="false" />
+
+			<!-- default action for "/" -->
+			<route name="index" pattern="^/$" module="%actions.default_module%" action="%actions.default_action%" />
+			<route name="index.feed" pattern="^/job.atom$" module="%actions.default_module%" action="%actions.default_action%" output_type="atom" />
+
+			<route name="language" pattern="^/language" module="Default" action="Language" />
+
+			<route name="jobs" pattern="^/jobs" module="Jobs">
+				<route name=".add" pattern="^/add$" action="Add" />
+
+				<route name=".job.show_user" pattern="^/(company:[a-zA-Z0-9\-]+)/(location:[a-zA-Z0-9\-]+)/(id:\d+)/(position:[a-zA-Z0-9\-]+)?$" action="Job.Show">
+					<callbacks>
+						<callback class="JobeetJobRoutingCallback" />
+					</callbacks>
+				</route>
+
+				<route name=".search" pattern="/search" action="Search" />
+
+				<route name=".job" pattern="^/(token:\w+)" action="Job">
+					<route name=".show" pattern="^$" action=".Show" />
+					<route name=".edit" pattern="^/edit$" action=".Edit" />
+					<route name=".delete" pattern="^/delete$" action=".Delete" />
+					<route name=".publish" pattern="^/publish$" action=".Publish" constraint="write" />
+					<route name=".extend" pattern="^/extend$" action=".Extend" constraint="write" />
+				</route>
+			</route>
+
+			<route name="categories" pattern="^/categories" module="Categories">
+				<route name=".category" pattern="^/(name:\w+)" action="Category">
+					<route name=".show" pattern="^/(page:\d+)?$" action=".Show">
+						<defaults>
+							<default for="page">1</default>
+						</defaults>
+					</route>
+					<route name=".show.feed" pattern="^.atom$" action=".Show" output_type="atom" />
+				</route>
+			</route>
+
+		</routes>
+	</ae:configuration>
+</ae:configurations>

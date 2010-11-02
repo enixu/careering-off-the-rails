@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" parent="%core.system_config_dir%/autoload.xml">
+	<ae:configuration>
+		<!-- Doctrine -->
+		<autoload name="Doctrine\Common\ClassLoader">%core.vendor_dir%/doctrine2-orm/lib/vendor/doctrine-common/lib/Doctrine/Common/ClassLoader.php</autoload>
+
+		<autoload name="Doctrine2Database">%core.lib_dir%/database/Doctrine2Database.class.php</autoload>
+		<autoload name="Doctrine2AgaviModel">%core.lib_dir%/database/Doctrine2AgaviModel.class.php</autoload>
+		<autoload name="Doctrine2Configuration">%core.lib_dir%/database/Doctrine2Configuration.class.php</autoload>
+		<autoload name="Doctrine2ContextEventListener">%core.lib_dir%/database/Doctrine2ContextEventListener.class.php</autoload>
+
+		<autoload name="Zend_Search_Lucene">%core.vendor_dir%/Zend/Search/Lucene.php</autoload>
+
+		<autoload name="JobeetUser">%core.lib_dir%/user/JobeetUser.class.php</autoload>
+		<autoload name="JobeetJobRoutingCallback">%core.lib_dir%/routing/JobeetJobRoutingCallback.class.php</autoload>
+		<autoload name="JobeetLanguageRoutingCallback">%core.lib_dir%/routing/JobeetLanguageRoutingCallback.class.php</autoload>
+		<autoload name="JobeetBaseAction">%core.lib_dir%/action/JobeetBaseAction.class.php</autoload>
+		<autoload name="JobeetBaseModel">%core.lib_dir%/model/JobeetBaseModel.class.php</autoload>
+		<autoload name="JobeetBaseView">%core.lib_dir%/view/JobeetBaseView.class.php</autoload>
+
+		<autoload name="DomainObject">%core.lib_dir%/model/DomainObject.class.php</autoload>
+
+		<!-- Domain Models -->
+		<autoload name="Jobeet\Job">%core.model_dir%/Entities/Job.php</autoload>
+		<autoload name="Jobeet\Category">%core.model_dir%/Entities/Category.php</autoload>
+		<autoload name="Jobeet\CategoryTranslation">%core.model_dir%/Entities/CategoryTranslation.php</autoload>
+		<autoload name="Jobeet\JobRepository">%core.model_dir%/Repositories/JobRepository.php</autoload>
+		<autoload name="Jobeet\CategoryRepository">%core.model_dir%/Repositories/CategoryRepository.php</autoload>
+
+		<!-- Validators -->
+		<autoload name="JobValidator">%core.lib_dir%/validator/JobValidator.class.php</autoload>
+		<autoload name="CategoryValidator">%core.lib_dir%/validator/CategoryValidator.class.php</autoload>
+		<autoload name="CategoryNameValidator">%core.lib_dir%/validator/CategoryNameValidator.class.php</autoload>
+		<autoload name="LanguageValidator">%core.lib_dir%/validator/LanguageValidator.class.php</autoload>
+	</ae:configuration>
+</ae:configurations>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+	xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+	xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+	parent="%core.module_dir%/Categories/config/validators.xml"
+>
+	<ae:configuration>
+
+		<validators>
+			<validator class="number" required="false">
+				<argument>page</argument>
+			</validator>
+
+			<validator class="CategoryNameValidator">
+				<argument>name</argument>
+				<ae:parameter name="export">category</ae:parameter>
+			</validator>
+		</validators>
+
+	</ae:configuration>
+</ae:configurations>

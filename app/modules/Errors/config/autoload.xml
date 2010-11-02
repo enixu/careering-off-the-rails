@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns="http://agavi.org/agavi/config/parts/autoload/1.0" xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0">
+	<ae:configuration>
+		
+		<autoload name="JobeetErrorsBaseAction">%core.module_dir%/Errors/lib/action/JobeetErrorsBaseAction.class.php</autoload>
+		<autoload name="JobeetErrorsBaseModel">%core.module_dir%/Errors/lib/model/JobeetErrorsBaseModel.class.php</autoload>
+		<autoload name="JobeetErrorsBaseView">%core.module_dir%/Errors/lib/view/JobeetErrorsBaseView.class.php</autoload>
+		
+	</ae:configuration>
+</ae:configurations>

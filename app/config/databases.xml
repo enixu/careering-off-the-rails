@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/databases/1.0">
+
+	<ae:configuration>
+		<databases default="doctrine">
+			<database name="doctrine" class="Doctrine2Database">
+				<ae:parameters>
+					<ae:parameter name="orm_path">%core.vendor_dir%/doctrine2-orm/lib</ae:parameter>
+					<ae:parameter name="dbal_path">%core.vendor_dir%/doctrine2-orm/lib/vendor/doctrine-dbal/lib</ae:parameter>
+					<ae:parameter name="common_path">%core.vendor_dir%/doctrine2-orm/lib/vendor/doctrine-common/lib</ae:parameter>
+
+					<ae:parameter name="entities">%core.model_dir%</ae:parameter>
+					<ae:parameter name="proxies">%core.cache_dir%</ae:parameter>
+					<ae:parameter name="charset">utf8</ae:parameter>
+
+					<ae:parameter name="driver">pdo_mysql</ae:parameter>
+					<ae:parameter name="hostname">localhost</ae:parameter>
+					<ae:parameter name="database">jobeet</ae:parameter>
+				</ae:parameters>
+			</database>
+		</databases>
+	</ae:configuration>
+
+	<ae:configuration environment="development">
+		<databases default="doctrine">
+			<database name="doctrine" class="Doctrine2Database">
+				<ae:parameters>
+					<ae:parameter name="username">root</ae:parameter>
+					<ae:parameter name="password"></ae:parameter>
+				</ae:parameters>
+			</database>
+		</databases>
+	</ae:configuration>
+
+	<ae:configuration environment="production">
+		<databases default="doctrine">
+			<database name="doctrine" class="Doctrine2Database">
+				<ae:parameters>
+					<ae:parameter name="username">root</ae:parameter>
+					<ae:parameter name="password"></ae:parameter>
+				</ae:parameters>
+			</database>
+		</databases>
+	</ae:configuration>
+
+</ae:configurations>

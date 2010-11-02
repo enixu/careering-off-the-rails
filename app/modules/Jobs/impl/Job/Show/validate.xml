@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+	xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+	xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+	parent="%core.module_dir%/Jobs/config/validators.xml"
+>
+	<ae:configuration>
+
+		<validators>
+			<validator class="or">
+				<validator class="JobValidator">
+					<argument>id</argument>
+					<ae:parameter name="export">job</ae:parameter>
+				</validator>
+
+				<validator class="JobValidator">
+					<argument>token</argument>
+					<ae:parameter name="by_token">true</ae:parameter>
+					<ae:parameter name="export">job</ae:parameter>
+				</validator>
+			</validator>
+		</validators>
+
+	</ae:configuration>
+</ae:configurations>

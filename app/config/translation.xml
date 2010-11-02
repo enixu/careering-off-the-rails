@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0" xmlns="http://agavi.org/agavi/config/parts/translation/1.0">
+	<ae:configuration>
+
+		<available_locales default_locale="en_US">
+			<!-- English, United States -->
+			<available_locale identifier="en_US">
+				<ae:parameter name="description">English</ae:parameter>
+			</available_locale>
+
+			<!-- French, France -->
+			<available_locale identifier="fr_FR">
+				<ae:parameter name="description">French</ae:parameter>
+			</available_locale>
+		</available_locales>
+
+		<translators default_domain="site.general">
+			<translator domain="site">
+				<message_translator class="AgaviSimpleTranslator">
+					<ae:parameter name="general">
+						<ae:parameter name="fr">
+							<ae:parameter name="Feed">Flux RSS</ae:parameter>
+							<ae:parameter name="Full feed">Plein Fil RSS</ae:parameter>
+							<ae:parameter name="Full time">À temps plein</ae:parameter>
+							<ae:parameter name="Part time">À temps partiel</ae:parameter>
+							<ae:parameter name="Freelance">Free-lance</ae:parameter>
+							<ae:parameter name="Post a job">Afficher un emploi</ae:parameter>
+							<ae:parameter name="Enter some keywords (city, country, position, ...)">Entrez des mots clés (ville, pays, poste, ...)</ae:parameter>
+							<ae:parameter name="New Job">Nouvel Emploi</ae:parameter>
+							<ae:parameter name="Edit Job">Modifier L'emploi</ae:parameter>
+							<ae:parameter name="Delete Job">Supprimer le Travail</ae:parameter>
+							<ae:parameter name="Delete job for position %s?">Supprimer l'emploi pour le poste %s?</ae:parameter>
+							<ae:parameter name="Your job is now online for %s days.">Votre travail est maintenant en ligne pendant %s jour.</ae:parameter>
+							<ae:parameter name="Your job validity has been extend until %s.">La validité de votre travail a été prorogé jusqu'au %s.</ae:parameter>
+							<ae:parameter name="and">et</ae:parameter> <!-- and %d more -->
+							<ae:parameter name="more">autres</ae:parameter>
+							<ae:parameter name="posted on">publié le</ae:parameter>
+							<ae:parameter name="Recently viewed jobs">Consultés récemment emplois</ae:parameter>
+							<ae:parameter name="Language">Langue</ae:parameter>
+							<ae:parameter name="Admin">Admin</ae:parameter>
+							<ae:parameter name="Edit">Modifier</ae:parameter>
+							<ae:parameter name="Publisher">Publier</ae:parameter>
+							<ae:parameter name="Delete">Supprimer</ae:parameter>
+							<ae:parameter name="Expired">Périmée</ae:parameter>
+							<ae:parameter name="Extend">Elargir la</ae:parameter>
+							<ae:parameter name="Expires in %s days">Expire dans %s jour</ae:parameter>
+							<ae:parameter name="for another %s days">pour un autre %s jours</ae:parameter>
+							<ae:parameter name="Bookmark this %s to manage this job in the future">Ajouter aux favoris %s de gérer ce travail à l'avenir</ae:parameter>
+							<ae:parameter name="Cancel">Annuler</ae:parameter>
+						</ae:parameter>
+					</ae:parameter>
+
+					<ae:parameter name="form">
+						<ae:parameter name="fr">
+							<ae:parameter name="Category">Catégorie</ae:parameter>
+							<ae:parameter name="Type">Type</ae:parameter>
+							<ae:parameter name="Company">Société</ae:parameter>
+							<ae:parameter name="Company logo">Logo de l'entreprise</ae:parameter>
+							<ae:parameter name="Url">Url</ae:parameter>
+							<ae:parameter name="Position">Position</ae:parameter>
+							<ae:parameter name="Location">Lieu</ae:parameter>
+							<ae:parameter name="Description">Description</ae:parameter>
+							<ae:parameter name="How to apply?">Comment postuler?</ae:parameter>
+							<ae:parameter name="Public?">Publique?</ae:parameter>
+							<ae:parameter name="Email">Email</ae:parameter>
+							<ae:parameter name="Whether the job can also be published on affiliate websites or not.">Si la tâche peut également être publiées sur les sites affiliés ou non.</ae:parameter>
+							<ae:parameter name="Invalid format.">Format non valide.</ae:parameter>
+							<ae:parameter name="Required.">Nécessaire.</ae:parameter>
+							<ae:parameter name="Preview your job">Aperçu de votre emploi</ae:parameter>
+							<ae:parameter name="Search">Rechercher</ae:parameter>
+						</ae:parameter>
+					</ae:parameter>
+				</message_translator>
+			</translator>
+
+			<!--<translator domain="errors">
+				<message_translator class="AgaviSimpleTranslator">
+					<ae:parameter name="Login">
+						<ae:parameter name="fr">
+							<ae:parameter name="Wrong Password">Falsches Passwort</ae:parameter>
+							<ae:parameter name="Wrong Username">Ungültiger Benutzername</ae:parameter>
+							<ae:parameter name="Please supply a password.">Bitte geben Sie ein Kennwort ein.</ae:parameter>
+							<ae:parameter name="The username you supplied is fewer than 5 characters long.">Der angegebene Benutzername ist weniger als fünf Zeichen lang.</ae:parameter>
+						</ae:parameter>
+					</ae:parameter>
+				</message_translator>
+			</translator>-->
+		</translators>
+
+	</ae:configuration>
+
+</ae:configurations>

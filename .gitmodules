@@ -1,0 +1,6 @@
+[submodule "libs/doctrine2-orm"]
+	path = libs/doctrine2-orm
+	url = git://github.com/doctrine/doctrine2.git
+[submodule "libs/agavi"]
+	path = libs/agavi
+	url = git://github.com/enixu/agavi-src.git

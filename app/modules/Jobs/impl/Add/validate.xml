@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ae:configurations
+	xmlns="http://agavi.org/agavi/config/parts/validators/1.0"
+	xmlns:ae="http://agavi.org/agavi/config/global/envelope/1.0"
+	parent="%core.module_dir%/Jobs/config/validators.xml"
+>
+	<ae:configuration>
+
+		<validators method="write">
+			<validator class="CategoryValidator">
+				<argument>category_id</argument>
+				<ae:parameter name="export">category</ae:parameter>
+			</validator>
+
+			<validator class="isset">
+				<argument>is_public</argument>
+			</validator>
+
+			<validator class="string" translation_domain="site.form">
+				<argument>company</argument>
+				<error>Required.</error>
+			</validator>
+
+			<validator class="number" translation_domain="site.form">
+				<argument>type</argument>
+				<ae:parameter name="min">0</ae:parameter>
+				<ae:parameter name="max">2</ae:parameter>
+				<error>Required.</error>
+			</validator>
+
+			<validator class="imagefile" required="false" translation_domain="site.form">
+				<argument>logo</argument>
+				<ae:parameter name="format">gif jpeg png</ae:parameter>
+				<error for="format">Invalid format.</error>
+			</validator>
+
+			<validator class="string" required="false" translation_domain="site.form">
+				<argument>url</argument>
+				<error>Required.</error>
+			</validator>
+
+			<validator class="string" translation_domain="site.form">
+				<argument>position</argument>
+				<error>Required.</error>
+			</validator>
+
+			<validator class="string" translation_domain="site.form">
+				<argument>location</argument>
+				<error>Required.</error>
+			</validator>
+
+			<validator class="string" translation_domain="site.form">
+				<argument>description</argument>
+				<error>Required.</error>
+			</validator>
+
+			<validator class="string" translation_domain="site.form">
+				<argument>how_to_apply</argument>
+				<error>Required.</error>
+			</validator>
+
+			<validator class="email" translation_domain="site.form">
+				<argument>email</argument>
+				<error>Required.</error>
+			</validator>
+		</validators>
+
+	</ae:configuration>
+</ae:configurations>
