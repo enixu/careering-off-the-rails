@@ -129,14 +129,6 @@ class Job extends \DomainObject
 	}
 
 	/**
-	 * @preUpdate
-	 */
-	public function preUpdate()
-	{
-		$this->updatedAt = new \DateTime();
-	}
-
-	/**
 	 * @postPersist
 	 * @postUpdate
 	 */

@@ -27,6 +27,13 @@ class Category extends \DomainObject
 	protected $createdAt;
 
 	/**
+	 * @var DateTime $updatedAt
+	 *
+	 * @Column(name="updated_at", type="datetime")
+	 */
+	protected $updatedAt;
+
+	/**
 	 * @var DateTime $jobAddedAt
 	 *
 	 * @Column(name="job_added_at", type="datetime")
@@ -53,7 +60,8 @@ class Category extends \DomainObject
 
 	public function __construct()
 	{
-		$this->createdAt = new \DateTime();
+		$this->createdAt  = new \DateTime();
+		$this->updatedAt  = new \DateTime();
 		$this->jobAddedAt = new \DateTime();
 	}
 
