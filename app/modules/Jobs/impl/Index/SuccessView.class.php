@@ -20,7 +20,7 @@ class Jobs_Index_SuccessView extends JobeetJobsBaseView
 		$em = $this->getEntityManager();
 
 		$categories = $em->getRepository('Jobeet\Category')->getWithJobs();
-		$jobCount = array();
+		$jobsCount = array();
 
 		// find active jobs for each category
 		$jobRepository = $em->getRepository('Jobeet\Job');

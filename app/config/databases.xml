@@ -9,8 +9,10 @@
 					<ae:parameter name="dbal_path">%core.vendor_dir%/doctrine2-orm/lib/vendor/doctrine-dbal/lib</ae:parameter>
 					<ae:parameter name="common_path">%core.vendor_dir%/doctrine2-orm/lib/vendor/doctrine-common/lib</ae:parameter>
 
+					<ae:parameter name="proxy_path">%core.model_dir%</ae:parameter>
+					<ae:parameter name="proxy_namespace">Proxies</ae:parameter>
+
 					<ae:parameter name="entities">%core.model_dir%</ae:parameter>
-					<ae:parameter name="proxies">%core.cache_dir%</ae:parameter>
 					<ae:parameter name="charset">utf8</ae:parameter>
 
 					<ae:parameter name="driver">pdo_mysql</ae:parameter>

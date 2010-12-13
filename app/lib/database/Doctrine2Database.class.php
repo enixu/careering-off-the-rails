@@ -35,6 +35,9 @@ class Doctrine2Database extends AgaviDatabase
 		$classLoader = new \Doctrine\Common\ClassLoader('Doctrine\Common', $parameters['common_path']);
 		$classLoader->register();
 
+		$classLoader = new \Doctrine\Common\ClassLoader($parameters['proxy_namespace'], $parameters['proxy_path']);
+		$classLoader->register();
+
 		$config = new Doctrine2Configuration();
 		$config->initialize($databaseManager->getContext());
 
@@ -46,8 +49,8 @@ class Doctrine2Database extends AgaviDatabase
 		$driverImpl = $config->newDefaultAnnotationDriver(array($parameters['entities']));
 		$config->setMetadataDriverImpl($driverImpl);
 
-		$config->setProxyDir($parameters['proxies']);
-		$config->setProxyNamespace('Proxies');
+		$config->setProxyDir($parameters['proxy_path'].'/'.str_replace('\\', '_', $parameters['proxy_namespace']));
+		$config->setProxyNamespace($parameters['proxy_namespace']);
 
 		$connectionParams = array(
 			'dbname'   => $parameters['database'],
