@@ -7,7 +7,9 @@ While only the general structure and templates remain similar,
 it should still give a good idea about the differences between the
 two frameworks and hopefully be a good reference for other projects.
 
-You can find the Jobeet demo site [here](http://www.jobeet.org/)
+You can find the original Jobeet demo site [here](http://www.jobeet.org/)
+
+You can find the CareeringOffTheRails demo site [here](http://careeringofftherails.enixu.com/)
 
 Installation
 ============
@@ -24,5 +26,3 @@ LICENSE
 =======
 
 Like Jobeet, CareeringOffTheRails is licensed under the MIT license.
-
-
