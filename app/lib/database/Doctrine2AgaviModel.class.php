@@ -28,13 +28,13 @@ abstract class Doctrine2AgaviModel extends AgaviModel
 	 */
 	public function __sleep()
 	{
+		$arr = get_object_vars($this);
+
 		if ($this->context) {
 			$this->_contextName = $this->context->getName();
-			$arr = get_object_vars($this);
 			unset($arr['context']);
-			return array_keys($arr);
 		}
-		return array();
+		return array_keys($arr);
 	}
 
 	/**
