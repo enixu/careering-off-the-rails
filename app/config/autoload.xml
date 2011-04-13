@@ -20,13 +20,6 @@
 
 		<autoload name="DomainObject">%core.lib_dir%/model/DomainObject.class.php</autoload>
 
-		<!-- Domain Models -->
-		<autoload name="Jobeet\Job">%core.model_dir%/Entities/Job.php</autoload>
-		<autoload name="Jobeet\Category">%core.model_dir%/Entities/Category.php</autoload>
-		<autoload name="Jobeet\CategoryTranslation">%core.model_dir%/Entities/CategoryTranslation.php</autoload>
-		<autoload name="Jobeet\JobRepository">%core.model_dir%/Repositories/JobRepository.php</autoload>
-		<autoload name="Jobeet\CategoryRepository">%core.model_dir%/Repositories/CategoryRepository.php</autoload>
-
 		<!-- Validators -->
 		<autoload name="JobValidator">%core.lib_dir%/validator/JobValidator.class.php</autoload>
 		<autoload name="CategoryValidator">%core.lib_dir%/validator/CategoryValidator.class.php</autoload>

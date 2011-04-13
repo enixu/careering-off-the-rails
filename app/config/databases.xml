@@ -12,7 +12,8 @@
 					<ae:parameter name="proxy_path">%core.model_dir%</ae:parameter>
 					<ae:parameter name="proxy_namespace">Proxies</ae:parameter>
 
-					<ae:parameter name="entities">%core.model_dir%</ae:parameter>
+					<ae:parameter name="entities_path">%core.model_dir%</ae:parameter>
+					<ae:parameter name="entities_namespace">Jobeet</ae:parameter>
 					<ae:parameter name="charset">utf8</ae:parameter>
 
 					<ae:parameter name="driver">pdo_mysql</ae:parameter>
