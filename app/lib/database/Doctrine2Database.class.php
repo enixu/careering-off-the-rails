@@ -18,15 +18,6 @@ class Doctrine2Database extends AgaviDatabase
 		if ($this->em === null) {
 			$parameters = $this->getParameters();
 
-			$classLoader = new \Doctrine\Common\ClassLoader('Doctrine\ORM', $parameters['orm_path']);
-			$classLoader->register();
-
-			$classLoader = new \Doctrine\Common\ClassLoader('Doctrine\DBAL', $parameters['dbal_path']);
-			$classLoader->register();
-
-			$classLoader = new \Doctrine\Common\ClassLoader($parameters['proxy_namespace'], $parameters['proxy_path']);
-			$classLoader->register();
-
 			$config = new Doctrine2Configuration();
 			$config->initialize($this->databaseManager->getContext());
 
@@ -38,7 +29,7 @@ class Doctrine2Database extends AgaviDatabase
 
 			$driverImpl = $config->newDefaultAnnotationDriver(array($parameters['entities_path']));
 			$config->setMetadataDriverImpl($driverImpl);
-	
+
 			$config->setProxyDir($parameters['proxy_path'].'/'.str_replace('\\', '_', $parameters['proxy_namespace']));
 			$config->setProxyNamespace($parameters['proxy_namespace']);
 
@@ -63,8 +54,17 @@ class Doctrine2Database extends AgaviDatabase
 	public function initialize(AgaviDatabaseManager $databaseManager, array $parameters = array())
 	{
 		parent::initialize($databaseManager, $parameters);
-		
+
 		$classLoader = new \Doctrine\Common\ClassLoader('Doctrine\Common', $parameters['common_path']);
+		$classLoader->register();
+
+		$classLoader = new \Doctrine\Common\ClassLoader('Doctrine\ORM', $parameters['orm_path']);
+		$classLoader->register();
+
+		$classLoader = new \Doctrine\Common\ClassLoader('Doctrine\DBAL', $parameters['dbal_path']);
+		$classLoader->register();
+
+		$classLoader = new \Doctrine\Common\ClassLoader($parameters['proxy_namespace'], $parameters['proxy_path']);
 		$classLoader->register();
 
 		$classLoader = new \Doctrine\Common\ClassLoader($parameters['entities_namespace'], $parameters['entities_path']);
