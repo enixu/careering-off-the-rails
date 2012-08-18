@@ -39,7 +39,6 @@
 
 			<validator class="string" required="false" translation_domain="site.form">
 				<argument>url</argument>
-				<error>Required.</error>
 			</validator>
 
 			<validator class="string" translation_domain="site.form">
