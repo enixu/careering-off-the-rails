@@ -21,10 +21,13 @@
 				<error>Required.</error>
 			</validator>
 
-			<validator class="number" translation_domain="site.form">
+			<validator class="inarray" translation_domain="site.form">
 				<argument>type</argument>
-				<ae:parameter name="min">0</ae:parameter>
-				<ae:parameter name="max">2</ae:parameter>
+				<ae:parameter name="values">
+					<ae:parameter>0</ae:parameter>
+					<ae:parameter>1</ae:parameter>
+					<ae:parameter>2</ae:parameter>
+				</ae:parameter>
 				<error>Required.</error>
 			</validator>
 
