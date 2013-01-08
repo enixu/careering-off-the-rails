@@ -19,7 +19,9 @@ h3 { font-size: 100%; }
 h4 { font-size: 90%; }
 
 a img { border: 0; }
-p.error { color: red; }
+p.error { color: #D00; }
+input.error, textarea.error { background-color: #FFE0E0; }
+label.error { color: #D00; }
 textarea { padding: 0.2em; }
 
 .flash_notice {
